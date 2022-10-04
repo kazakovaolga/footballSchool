@@ -10,7 +10,7 @@ const NODE_ENV = process.env.NODE_ENV as
   | 'production'
   | undefined;
 
-const GITHUB_PREFIX = '';
+const GITHUB_PREFIX = '/footballSchool';
 
 const config: webpack.Configuration = {
   entry: { bundle: './src/index.tsx' },
@@ -22,6 +22,7 @@ const config: webpack.Configuration = {
     environment: {
       arrowFunction: false,
     },
+    publicPath: NODE_ENV === 'production' ? GITHUB_PREFIX : "/",
   },
   devtool: NODE_ENV === 'development' ? 'eval-source-map' : 'source-map',
   module: {
@@ -40,7 +41,7 @@ const config: webpack.Configuration = {
           "css-loader",
           { loader: "sass-loader", options: { sourceMap: true } },
         ],
-      },    
+      },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         type: 'asset/resource',
@@ -54,12 +55,12 @@ const config: webpack.Configuration = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'public/index.html',
-    }),    
+    }),
     new MiniCssExtractPlugin(),
   ],
   mode: NODE_ENV,
   resolve: {
-    extensions: ['.js', '.ts', '.tsx','.jsx'],
+    extensions: ['.js', '.ts', '.tsx', '.jsx'],
   },
   optimization: {
     minimizer: [`...`, new CssMinimizerPlugin()],
@@ -67,8 +68,8 @@ const config: webpack.Configuration = {
   devServer: {
     compress: true,
     port: 9000,
-    watchFiles: ['*.html'],
-    historyApiFallback:true
+    watchFiles: ['public/index.html'],
+    historyApiFallback: true
   },
 };
 
