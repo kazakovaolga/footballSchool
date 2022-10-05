@@ -16,7 +16,7 @@ import { Photo } from "../../Pages/Poto/poto";
 
 export const App = () => {
     return <>
-        <BrowserRouter>
+        <BrowserRouter basename="/footballSchool">
             <Provider store={store}>
                 <Routes>
                     <Route path="/" element={<About />} />
