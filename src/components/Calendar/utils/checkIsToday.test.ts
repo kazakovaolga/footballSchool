@@ -1,4 +1,4 @@
-import {checkIsToday} from './checkIsToday';
+import {checkIsToday} from "./checkIsToday";
 
 describe("Inspect checkIsToday function", () => {    
   it("is a function", () => {
@@ -7,7 +7,7 @@ describe("Inspect checkIsToday function", () => {
 
   it("checking for the current date", () => {
     const date = new Date();
-    expect(checkIsToday(date)).toBeTruthy;
+    expect(checkIsToday(date)).toBeTruthy();
   });
 
 });

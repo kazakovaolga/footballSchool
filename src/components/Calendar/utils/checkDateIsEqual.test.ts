@@ -1,4 +1,4 @@
-import { checkDateIsEqual } from './checkDateIsEqual';
+import { checkDateIsEqual } from "./checkDateIsEqual";
 
 describe("Inspect checkDateIsEqual function", () => {
     it("is a function", () => {
@@ -6,9 +6,9 @@ describe("Inspect checkDateIsEqual function", () => {
     });
 
     it("checking for equality of dates", () => {
-        const date1 = new Date();
-        const date2 = new Date(2022, 9, 10);
-        expect(checkDateIsEqual(date1,date2)).toBeFalsy;
+        const date1 = new Date();        
+        const date2 = new Date(2022, 10, 10);        
+        expect(checkDateIsEqual(date1,date2)).toBeFalsy();
     });
 
 });

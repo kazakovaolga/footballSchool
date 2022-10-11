@@ -1,4 +1,4 @@
-import { createDate } from './createDate';
+import { createDate } from "./createDate";
 import { getWeekNumber } from "./getWeekNumber";
 
 describe("Inspect checkIsToday function", () => {

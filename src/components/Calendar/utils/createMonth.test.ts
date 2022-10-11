@@ -1,5 +1,5 @@
-import { createMonth } from './createMonth';
-import { createDate } from './createDate';
+import { createMonth } from "./createMonth";
+import { createDate } from "./createDate";
 
 describe("Inspect createMonth function", () => {
 
@@ -8,14 +8,14 @@ describe("Inspect createMonth function", () => {
     });
 
     it("checking type of  returned value", () => {
-        expect(typeof(createMonth())).toEqual('object');
+        expect(typeof(createMonth())).toEqual("object");
     });
 
     it("getting a list of days in a month", () => {
         let date;
-        let arr = [];
+        const arr = [];
         for (let i = 0; i < 31; i++) {
-            date = new Date(2022, 9, i + 1)
+            date = new Date(2022, 9, i + 1);
             arr.push(createDate({ date: date, locale: "default" }));
         }
         expect(createMonth({ date: date, locale: "default" }).createMonthDays()).toEqual(arr);
@@ -23,7 +23,7 @@ describe("Inspect createMonth function", () => {
 
     it("getting a month name", () => {
         const date = new Date(2022, 10);
-        expect(createMonth({ date: date, locale: "default" }).monthName).toEqual('ноябрь');
+        expect(createMonth({ date: date, locale: "default" }).monthName).toEqual("ноябрь");
     });
 
 });
