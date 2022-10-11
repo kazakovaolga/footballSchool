@@ -69,7 +69,9 @@ const config: webpack.Configuration = {
     compress: true,
     port: 9000,
     watchFiles: ['public/index.html'],
-    historyApiFallback: true
+    historyApiFallback: true,
+    open: ['/footballSchool'],
+
   },
 };
 
