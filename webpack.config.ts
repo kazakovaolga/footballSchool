@@ -10,7 +10,7 @@ const NODE_ENV = process.env.NODE_ENV as
   | 'production'
   | undefined;
 
-const GITHUB_PREFIX = '/footballSchool';
+const GITHUB_PREFIX = '/footballSchool/';
 
 const config: webpack.Configuration = {
   entry: { bundle: './src/index.tsx' },
