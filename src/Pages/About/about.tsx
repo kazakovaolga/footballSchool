@@ -40,8 +40,7 @@ export const About: FC = function () {
             querySnapshot().then(
                 (result) => {
                     result.forEach(
-                        (doc) => {
-                            if (doc.data().email === email) console.log(doc.id, " => ", doc.data());
+                        (doc) => {                            
                             const tokenString = sessionStorage.getItem("user") as string;
                             const userToken = JSON.parse(tokenString);
 

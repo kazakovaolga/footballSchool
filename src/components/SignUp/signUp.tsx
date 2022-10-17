@@ -20,8 +20,7 @@ export const SignUp:FC = function () {
     const handleRegister = function (email: string, password: string) {        
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, email, password)
-            .then(({ user }) => {
-                console.log(user);
+            .then(({ user }) => {                
                 dispatch(setUser({
                     email: user.email,
                     id: user.uid,

@@ -91,11 +91,8 @@ export const Calendar: React.FC<CalendarProps> = ({
                                                     (result) => {
                                                         result.forEach(
                                                             (el) => {
-                                                                const task=el.data();
-                                                                console.log("task=",task);
+                                                                const task=el.data();                                                                
                                                                 divTask.innerHTML =  divTask.innerHTML +`<p>Команда:${task.teamName}</p><p>Дата: ${task.date}</p><p>Время: ${task.time}</p><hr/>`;
-                                                                console.log("divTask=", divTask);
-                                                                console.log(el.id);
                                                             }
                                                         );
                                                     }

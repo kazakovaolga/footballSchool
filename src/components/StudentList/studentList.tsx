@@ -8,7 +8,7 @@ export const StudentList= function (data:any) {
                 <a
                     href="/studentInfo"
                 >
-                    <img className="foto" src=${foto} />
+                    <img className="foto" src="../../../assets/4.jpg" />
                 </a>
                 <br />${data.surname} ${data.name}
             </p>

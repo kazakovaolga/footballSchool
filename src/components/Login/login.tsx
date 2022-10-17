@@ -15,8 +15,7 @@ export const Login: FC<any> = function ({ title, handleClick }) {
     const handleLogin = function (email: string, password: string) {        
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
-            .then(({ user }) => {
-                console.log(user);
+            .then(({ user }) => {                
                 dispatch(setUser({
                     email: user.email,
                     id: user.uid,

@@ -7,8 +7,7 @@ describe("Inspect getWeekNumber function", () => {
     });
 
     it("getting weeks number", () => {   
-        const date=new Date(2022,9,11);   
-        console.log(date)  ;
+        const date=new Date(2022,9,11);           
         expect(getWeekNumber(date)).toEqual(42);
     });
 

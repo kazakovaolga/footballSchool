@@ -61,8 +61,7 @@ export const StudentsListControl: FC = function () {
         id: userToken.id,
         token: userToken.token
     }));
-
-    console.log(store.getState());
+    
     const { isAuth, email } = useAuth();
 
     return isAuth ? (

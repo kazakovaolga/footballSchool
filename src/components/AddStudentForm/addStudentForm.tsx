@@ -1,7 +1,7 @@
 //scss
 import "./index.scss";
 //react
-import { useState } from "react";
+import { useState, FC } from "react";
 import { useNavigate } from "react-router-dom";
 //firebase
 import { db } from "../../firebase";
@@ -10,7 +10,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { Header } from "../Header";
 
 
-export const AddStudentForm = function () {
+export const AddStudentForm: FC = function () {
     const navigate = useNavigate();
 
     const [surname, setSurname] = useState("");
@@ -49,7 +49,7 @@ export const AddStudentForm = function () {
     return (
         <div className="addStudentForm">
             <form onSubmit={(e: React.ChangeEvent<HTMLFormElement>) => onSubmit(e)}>
-                <Header className="headerAddStudent" level={2} text="Добавить нового спортсмена" />                
+                <Header className="headerAddStudent" level={2} text="Добавить нового спортсмена" />
                 <br /><br />
                 <label>Фамилия</label>
                 <input
