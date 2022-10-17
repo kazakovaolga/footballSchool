@@ -9,8 +9,8 @@ describe("Inspect Contacts component", () => {
         const src = "../../../assets/insta.jpg";
         render(<Contacts href={href} src={src}/>);
 
-        expect(screen.getByRole('img')).toBeInTheDocument();
-        expect(screen.getByRole('link')).toBeInTheDocument();                 
+        expect(screen.getByRole("img")).toBeInTheDocument();
+        expect(screen.getByRole("link")).toBeInTheDocument();                 
         // expect(screen.getByText(text)).toBeInTheDocument();
     });
 });

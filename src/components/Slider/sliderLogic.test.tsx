@@ -3,7 +3,7 @@ import { SliderLogic } from "./sliderLogic";
 describe("Inspect Slider function", () => {
   let container:HTMLElement;
 //   let logSpy:(object: Console, method: "log")=>jest.SpyInstance;
-  let slideIndex = 1;
+  const slideIndex = 1;
   let previous:HTMLElement;
   let next:HTMLElement;
 
@@ -29,7 +29,7 @@ describe("Inspect Slider function", () => {
     expect(container).toBeInstanceOf(HTMLUListElement);
   });
 
-  it("container class name is slider ", () => {
+  it("container class name is slider", () => {
     const className = container.className;
     expect(className).toEqual("slider");
   });
@@ -39,13 +39,13 @@ describe("Inspect Slider function", () => {
     const slides = container.querySelectorAll(".slider__item") as NodeListOf<HTMLElement>;  
     
     sliderItem.showSlides(container,0);
-    expect(slides[3].style.display).toEqual('block');      
+    expect(slides[3].style.display).toEqual("block");      
 
     sliderItem.showSlides(container,5);
-    expect(slides[0].style.display).toEqual('block');   
+    expect(slides[0].style.display).toEqual("block");   
   });
 
-  it("click previos and nest slide ", () => {
+  it("click previos and nest slide", () => {
     const sliderItem = new SliderLogic(container);
     previous.addEventListener("click", () => {
       sliderItem.previous(container);
@@ -55,11 +55,11 @@ describe("Inspect Slider function", () => {
     });
     sliderItem.showSlides(container,1);
     previous.click();
-    let slides = container.querySelectorAll(".slider__item") as NodeListOf<HTMLElement>
-    expect(slides[3].style.display).toEqual('block');    
+    let slides = container.querySelectorAll(".slider__item") as NodeListOf<HTMLElement>;
+    expect(slides[3].style.display).toEqual("block");    
 
     next.click();
-    slides = container.querySelectorAll(".slider__item") as NodeListOf<HTMLElement>
-    expect(slides[0].style.display).toEqual('block');   
+    slides = container.querySelectorAll(".slider__item") as NodeListOf<HTMLElement>;
+    expect(slides[0].style.display).toEqual("block");   
   });
 });

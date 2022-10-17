@@ -9,8 +9,8 @@ describe("Inspect Article component", () => {
         const level = 2;
         render(<Article />);
 
-        expect(screen.getByRole('heading')).toBeInTheDocument();
-        expect(screen.getByRole('article')).toBeInTheDocument();                 
+        expect(screen.getByRole("heading")).toBeInTheDocument();
+        expect(screen.getByRole("article")).toBeInTheDocument();                 
         expect(screen.getByText(text)).toBeInTheDocument();
     });
 });

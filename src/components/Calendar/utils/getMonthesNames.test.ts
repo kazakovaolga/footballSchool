@@ -19,7 +19,7 @@ describe("Inspect getMonthesNames function", () => {
         const d = new Date();
         monthesNames.forEach((_, i) => {
             const { month, monthIndex, monthShort, date } = createDate({
-                locale: 'default',
+                locale: "default",
                 date: new Date(d.getFullYear(), d.getMonth() + i, 1)
             });
 

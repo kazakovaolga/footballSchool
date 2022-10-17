@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router} from "react-router-dom";
 import { List } from ".";
 
 describe("List testing", () => {
@@ -11,12 +11,12 @@ describe("List testing", () => {
 
     test("testing render List",  () => {        
         render( <Router><List/></Router>);
-        const list = screen.getByRole('list');
+        const list = screen.getByRole("list");
         expect(list).toBeInTheDocument();
-        expect(list).toHaveClass('navigation__list');
-        const listItems=screen.queryAllByRole('listitem');
+        expect(list).toHaveClass("navigation__list");
+        const listItems=screen.queryAllByRole("listitem");
         listItems.forEach(function(item, index, array) {
-            expect(item).toHaveClass('navigation__list-element');
+            expect(item).toHaveClass("navigation__list-element");
           }            
         );      
     });

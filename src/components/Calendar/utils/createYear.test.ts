@@ -15,7 +15,7 @@ describe("Inspect createYear function", () => {
 
     it("getting current month", () => {
         const month = monthesDictNames[new Date().getMonth()];
-        expect(createYear({ locale: "default" }).month.monthName).toEqual('октябрь');
+        expect(createYear({ locale: "default" }).month.monthName).toEqual("октябрь");
         // createYear({ locale: "default" }).month.getDay
     });
 

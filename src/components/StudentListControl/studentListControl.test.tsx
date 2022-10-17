@@ -9,14 +9,14 @@ describe("List testing", () => {
     });
 
     test("testing  getting template StudentList",  () => {
-        const data={surname:'Kazakov',name:'Damir',age:7,teamName:'RKeaper',date:'07.12.2015'}    
-        const id='1';
+        const data={surname:"Kazakov",name:"Damir",age:7,teamName:"RKeaper",date:"07.12.2015"};    
+        const id="1";
         const str=StudentListControl(data,id);
         render(<>{str}</>);         
 
-        const paragraphItems=screen.queryAllByRole('paragraph');
+        const paragraphItems=screen.queryAllByRole("paragraph");
         paragraphItems.forEach(function(item) {
-            expect(item).toHaveClass('studentsListControl__div-p');
+            expect(item).toHaveClass("studentsListControl__div-p");
           }            
         );    
     });

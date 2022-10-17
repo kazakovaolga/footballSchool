@@ -11,7 +11,7 @@ describe("Inspect formatDate function", () => {
         const y=date.getFullYear();
         const m=date.getMonth();
         const d=date.getDate();
-        expect(formatDate(date,'YYYY:MM:DD')).toEqual(`${y}:${m+1}:${d}`);        
+        expect(formatDate(date,"YYYY:MM:DD")).toEqual(`${y}:${m+1}:${d}`);        
     });
 
 });

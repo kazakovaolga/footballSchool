@@ -1,5 +1,5 @@
 import { getWeekDaysNames } from "./getWeekDaysNames";
-import { weeksDictNames } from './dicts';
+import { weeksDictNames } from "./dicts";
 
 describe("Inspect getWeekDaysNames function", () => {
 
