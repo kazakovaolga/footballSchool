@@ -63,7 +63,7 @@ export const About: FC = function () {
     const { isAuth, email, role } = useAuth();
 
     if (!isAuth) return (
-        <Navigate to='/login' />
+        <Navigate to='/login'/>
     );
 
     if (isAuth && !role) return (<Header className="header" level={1} text="Идет загрузка данных. Подождите..." />);
@@ -80,7 +80,7 @@ export const About: FC = function () {
             <Navigation><List4Trainer /></Navigation>
             <div className='app__container'>
                 <div className='date__container'>{formatDate(selectedDate, "DDD DD MMM YYYY")}</div>
-                <Calendar selectedDate={selectedDate} selectDate={(date) => setSelectedDay(date)} />
+                <Calendar selectedDate={selectedDate} selectDate={(date) => setSelectedDay(date)}/>
             </div>
         </>
     );

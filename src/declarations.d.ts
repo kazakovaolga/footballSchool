@@ -6,3 +6,7 @@ declare module "*.scss" {
     const content: {[key: string]: any};
     export = content
 }
+declare module 'react/jsx-runtime' {
+    const content: string;
+    export default content;
+  }

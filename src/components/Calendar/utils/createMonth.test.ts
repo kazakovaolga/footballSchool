@@ -23,7 +23,7 @@ describe("Inspect createMonth function", () => {
 
     it("getting a month name", () => {
         const date = new Date(2022, 10);
-        expect(createMonth({ date: date, locale: "default" }).monthName).toEqual("ноябрь");
+        expect(createMonth({ date: date, locale: "default" }).monthName).toEqual("November");
     });
 
 });
