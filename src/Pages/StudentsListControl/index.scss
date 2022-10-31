@@ -1,0 +1,43 @@
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$width_flex_item: 50%;
+
+.studentsListControl {
+  padding-left: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+@media screen and (max-width: $small) {
+  .studentsListControl {
+    grid-template-columns: repeat(2, 1fr);
+    width: $width_flex_item;
+  }
+}
+
+@media screen and (min-width: $small) and (max-width: $medium) {
+  .studentsListControl {
+    grid-template-columns: repeat(2, 1fr);
+    width: $width_flex_item;
+  }
+}
+
+@media screen and (min-width: $medium) and (max-width: $large) {
+  .studentsListControl {
+    grid-template-columns: repeat(3, 1fr);
+    width: $width_flex_item;
+  }
+}
+
+.studentsListControl__div {
+    justify-self: center;
+    align-self: center;
+  }
+
+  .studentsListControl__div-p {
+    font-size: medium;
+  }
+  

@@ -1,0 +1,83 @@
+@mixin flex-box-parameters {
+  gap: 160px;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.footer {
+  display: flex;
+  gap: 150px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 70%;
+}
+
+.auth {
+    margin-top: 0 px;
+    margin-left: 200px;
+    background-color: aqua;
+}
+@media screen and (min-width:  576px) and (max-width: 768px) {
+  .footer {
+    @include flex-box-parameters;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer {
+    @include flex-box-parameters;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .footer {
+    gap: 180px;
+  }
+}
+
+.header {
+  font-size: xx-large;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.signOut {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: #eee;
+  border: 1px solid #bdbdbd;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  transition: background-color .15s ease-in-out;
+}
+.signOut:hover {
+  background-color: #bdbdbd;
+}
+
+.app__container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: column;
+  background-color: #cff7e5;
+  margin-top: 10%;
+}
+
+.date__container {
+  background-color: var(--background-color-calendar);
+  font-size: 25px;
+  color: var(--color-text);
+  border-radius: 25px;
+  padding: 5px 25px;
+  margin-bottom: 15px;
+}
+
